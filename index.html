@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Início — BRASA Burger House</title>
+<meta name="description" content="BRASA Burger House — hambúrgueres artesanais com delivery. O sabor fala mais alto.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>try{document.documentElement.dataset.theme=JSON.parse(localStorage.getItem('brasa_theme'))||'light'}catch(e){document.documentElement.dataset.theme='light'}</script>
+</head>
+<body data-page="home">
+<div class="topbar">Entrega grátis acima de R$ 50 · Use o cupom BRASA10 no primeiro pedido</div>
+<header class="header">
+  <div class="container nav">
+    <a class="logo" href="index.html" aria-label="BRASA Burger House — início"><b>BRASA</b><small>BURGER HOUSE · DELIVERY</small></a>
+    <form class="search" action="cardapio.html" role="search"><input type="search" name="q" placeholder="Buscar hambúrgueres, combos, bebidas..." aria-label="Buscar"></form>
+    <nav class="links" aria-label="Principal">
+      <a data-nav="home" href="index.html">Início</a>
+      <a data-nav="cardapio" href="cardapio.html">Cardápio</a>
+      <a data-nav="pedidos" href="pedidos.html">Meus Pedidos</a>
+    </nav>
+    <div class="actions">
+      <button class="icon-btn" id="themeBtn" aria-label="Alternar entre modo claro e escuro" title="Alternar tema"><span class="ico-sun">☀</span><span class="ico-moon">☾</span></button>
+      <span id="authArea"></span>
+      <a class="btn btn-soft btn-sm cart-link" href="carrinho.html" data-nav="carrinho">Carrinho · <span id="cartCount">0</span></a>
+    </div>
+  </div>
+</header>
+<main>
+<section class="container">
+  <div class="hero">
+    <div>
+      <span class="eyebrow">BURGERS ARTESANAIS</span>
+      <h1>O sabor fala mais alto.</h1>
+      <p>Hambúrgueres artesanais, ingredientes selecionados e o verdadeiro sabor da brasa. Seu próximo favorito está aqui.</p>
+      <div class="hero-actions"><a class="btn btn-dark" href="cardapio.html">Explorar cardápio</a><a class="btn btn-light-ghost" href="#sobre">Conheça a BRASA</a></div>
+      <ul class="pills"><li>30–40 min</li><li>Entrega a partir de R$ 5,90</li><li>★ 4,8 (2 mil)</li></ul>
+    </div>
+    <div class="hero-img"><img src="hero.jpg" alt="Hambúrguer artesanal duplo com cheddar derretido e bacon" fetchpriority="high"></div>
+  </div>
+</section>
+<section class="section container"><h2>Categorias</h2><div class="cats"><a class="cat" href="cardapio.html?cat=burgers"><span class="ph"><img src="cat_burger.jpg" alt="" loading="lazy"></span><span>Hambúrgueres</span></a><a class="cat" href="cardapio.html?cat=combos"><span class="ph"><img src="cat_combo.jpg" alt="" loading="lazy"></span><span>Combos</span></a><a class="cat" href="cardapio.html?cat=sides"><span class="ph"><img src="p_batata.jpg" alt="" loading="lazy"></span><span>Acompanhamentos</span></a><a class="cat" href="cardapio.html?cat=drinks"><span class="ph"><img src="p_refrigerante.jpg" alt="" loading="lazy"></span><span>Bebidas</span></a><a class="cat" href="cardapio.html?cat=desserts"><span class="ph"><img src="p_brownie.jpg" alt="" loading="lazy"></span><span>Sobremesas</span></a></div></section>
+<section class="band" id="cupons"><div class="container"><h2 style="font-size:clamp(28px,3vw,36px);margin-bottom:24px">Cupons e ofertas</h2>
+  <div class="coupons">
+    <article class="coupon coupon-a"><div><small>CUPOM</small><strong>BRASA10</strong><p>10% de desconto no primeiro pedido</p></div><button class="btn btn-dark btn-sm" data-copy="BRASA10">Copiar cupom</button></article>
+    <article class="coupon coupon-b"><div><small>CUPOM</small><strong>FRETEGRATIS</strong><p>Entrega grátis em pedidos acima de R$ 50</p></div><button class="btn btn-dark btn-sm" data-copy="FRETEGRATIS">Copiar cupom</button></article>
+  </div></div></section>
+<section class="section container"><div class="head"><h2>Mais pedidos</h2><a class="link" href="cardapio.html">Ver cardápio completo →</a></div><div class="grid" id="featured"></div></section>
+<section class="container"><div class="promo">
+  <div class="promo-img"><img src="combo_double.jpg" alt="Combo Double com hambúrguer duplo, batata frita e refrigerante" loading="lazy"></div>
+  <div><small>COMBO DA SEMANA</small><h2>Combo Double</h2><p>Double Smash, batata rústica e refrigerante gelado. Entrega em 35 min.</p>
+    <div class="big">R$ 56,90 <s>de R$ 62,90</s></div><button class="btn btn-pri" data-add="combo-double">Adicionar ao carrinho</button></div>
+</div></section>
+<section class="section container" id="sobre"><div class="about">
+  <div><small>SOBRE A BRASA</small><h2>Feita na brasa, entregue com cuidado.</h2><p>Blend artesanal, pão macio e ingredientes frescos. Cada pedido sai da chapa direto para uma embalagem térmica, para chegar quente na sua porta.</p></div>
+  <div class="about-img"><img src="sobre.jpg" alt="Cheddar sendo derramado sobre um hambúrguer artesanal" loading="lazy"></div>
+</div></section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div><b class="brand">BRASA</b><p>BURGER HOUSE · DELIVERY</p><p style="margin-top:8px">O sabor fala mais alto.</p></div>
+      <div><h4>Navegação</h4><ul><li><a href="index.html">Início</a></li><li><a href="cardapio.html">Cardápio</a></li><li><a href="index.html#cupons">Promoções</a></li><li><a href="pedidos.html">Meus Pedidos</a></li></ul></div>
+      <div><h4>Contato (demonstrativo)</h4><ul><li>(31) 99999-0000</li><li>contato@brasa.demo</li><li>Rua das Brasas, 123</li></ul></div>
+      <div><h4>Redes sociais</h4><ul><li><a href="#">Instagram</a></li><li><a href="#">WhatsApp</a></li><li><a href="#">Facebook</a></li></ul></div>
+    </div>
+    <p class="copy">© 2026 BRASA Burger House. Todos os direitos reservados. Projeto acadêmico — dados fictícios.</p>
+  </div>
+</footer>
+<nav class="bnav" aria-label="Navegação inferior">
+  <a data-nav="home" href="index.html">Início</a>
+  <a data-nav="cardapio" href="cardapio.html">Cardápio</a>
+  <a data-nav="carrinho" href="carrinho.html">Carrinho<i id="cartCountM"></i></a>
+  <a data-nav="pedidos" href="pedidos.html">Pedidos</a>
+  <a data-nav="perfil" href="perfil.html">Perfil</a>
+</nav>
+<script src="script.js"></script>
+</body>
+</html>

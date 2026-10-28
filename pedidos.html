@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meus Pedidos — BRASA Burger House</title>
+<meta name="description" content="BRASA Burger House — hambúrgueres artesanais com delivery. O sabor fala mais alto.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>try{document.documentElement.dataset.theme=JSON.parse(localStorage.getItem('brasa_theme'))||'light'}catch(e){document.documentElement.dataset.theme='light'}</script>
+</head>
+<body data-page="pedidos">
+<div class="topbar">Entrega grátis acima de R$ 50 · Use o cupom BRASA10 no primeiro pedido</div>
+<header class="header">
+  <div class="container nav">
+    <a class="logo" href="index.html" aria-label="BRASA Burger House — início"><b>BRASA</b><small>BURGER HOUSE · DELIVERY</small></a>
+    <form class="search" action="cardapio.html" role="search"><input type="search" name="q" placeholder="Buscar hambúrgueres, combos, bebidas..." aria-label="Buscar"></form>
+    <nav class="links" aria-label="Principal">
+      <a data-nav="home" href="index.html">Início</a>
+      <a data-nav="cardapio" href="cardapio.html">Cardápio</a>
+      <a data-nav="pedidos" href="pedidos.html">Meus Pedidos</a>
+    </nav>
+    <div class="actions">
+      <button class="icon-btn" id="themeBtn" aria-label="Alternar entre modo claro e escuro" title="Alternar tema"><span class="ico-sun">☀</span><span class="ico-moon">☾</span></button>
+      <span id="authArea"></span>
+      <a class="btn btn-soft btn-sm cart-link" href="carrinho.html" data-nav="carrinho">Carrinho · <span id="cartCount">0</span></a>
+    </div>
+  </div>
+</header>
+<main class="container page">
+  <header class="page-head"><h1>Meus Pedidos</h1><p>Acompanhe o status e consulte seu histórico.</p></header>
+  <div class="chips" id="statusChips" role="group" aria-label="Filtrar por status" style="margin-top:24px"></div>
+  <div class="orders" id="orders"></div>
+  <div class="empty" id="ordersNone" hidden><div class="ic">0</div><h2>Nenhum pedido com este status</h2><p>Escolha outro filtro para ver seus pedidos.</p></div>
+  <div class="empty" id="ordersEmpty" hidden><div class="ic">0</div><h2>Você ainda não fez pedidos</h2><p>Quando você fizer seu primeiro pedido, ele aparecerá aqui.</p><a class="btn btn-pri" href="cardapio.html">Explorar cardápio</a></div>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div><b class="brand">BRASA</b><p>BURGER HOUSE · DELIVERY</p><p style="margin-top:8px">O sabor fala mais alto.</p></div>
+      <div><h4>Navegação</h4><ul><li><a href="index.html">Início</a></li><li><a href="cardapio.html">Cardápio</a></li><li><a href="index.html#cupons">Promoções</a></li><li><a href="pedidos.html">Meus Pedidos</a></li></ul></div>
+      <div><h4>Contato (demonstrativo)</h4><ul><li>(31) 99999-0000</li><li>contato@brasa.demo</li><li>Rua das Brasas, 123</li></ul></div>
+      <div><h4>Redes sociais</h4><ul><li><a href="#">Instagram</a></li><li><a href="#">WhatsApp</a></li><li><a href="#">Facebook</a></li></ul></div>
+    </div>
+    <p class="copy">© 2026 BRASA Burger House. Todos os direitos reservados. Projeto acadêmico — dados fictícios.</p>
+  </div>
+</footer>
+<nav class="bnav" aria-label="Navegação inferior">
+  <a data-nav="home" href="index.html">Início</a>
+  <a data-nav="cardapio" href="cardapio.html">Cardápio</a>
+  <a data-nav="carrinho" href="carrinho.html">Carrinho<i id="cartCountM"></i></a>
+  <a data-nav="pedidos" href="pedidos.html">Pedidos</a>
+  <a data-nav="perfil" href="perfil.html">Perfil</a>
+</nav>
+<script src="script.js"></script>
+</body>
+</html>

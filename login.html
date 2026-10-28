@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Entrar — BRASA Burger House</title>
+<meta name="description" content="BRASA Burger House — hambúrgueres artesanais com delivery. O sabor fala mais alto.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>try{document.documentElement.dataset.theme=JSON.parse(localStorage.getItem('brasa_theme'))||'light'}catch(e){document.documentElement.dataset.theme='light'}</script>
+</head>
+<body data-page="login">
+<main class="auth">
+  <section class="auth-form">
+    <a class="logo" href="index.html" aria-label="BRASA — início"><b>BRASA</b><small>BURGER HOUSE · DELIVERY</small></a>
+    <h1>Entrar na sua conta</h1><p class="muted">Peça seus favoritos em poucos cliques.</p>
+    <form class="form" id="loginForm" novalidate>
+      <div class="field" data-field="email"><label for="email">E-mail<span class="req" aria-hidden="true">*</span></label><div class="input-wrap"><input id="email" name="email" type="email" placeholder="nome@email.com" inputmode="email" autocomplete="email" required aria-required="true"></div><p class="msg" role="alert"></p></div>
+      <div class="field" data-field="loginPass"><label for="password">Senha<span class="req" aria-hidden="true">*</span></label><div class="input-wrap"><input id="password" name="password" type="password" placeholder="Digite sua senha" autocomplete="current-password" required aria-required="true"> <button type="button" class="toggle-pass">Mostrar</button></div><p class="msg" role="alert"></p></div>
+      <p class="form-error" id="formError" role="alert" hidden></p>
+      <div class="row-end"><a class="link" href="#" onclick="alert('Recuperação de senha será feita no back-end.');return false">Esqueceu a senha?</a></div>
+      <button class="btn btn-pri btn-block" type="submit">Entrar</button>
+      <p class="alt">Ainda não tem conta? <a href="cadastro.html">Criar conta</a></p>
+    </form>
+  </section>
+  <aside class="auth-photo" aria-hidden="true"><img src="hero.jpg" alt=""><p>O sabor fala mais alto.</p></aside>
+</main>
+<nav class="bnav" aria-label="Navegação inferior">
+  <a data-nav="home" href="index.html">Início</a>
+  <a data-nav="cardapio" href="cardapio.html">Cardápio</a>
+  <a data-nav="carrinho" href="carrinho.html">Carrinho<i id="cartCountM"></i></a>
+  <a data-nav="pedidos" href="pedidos.html">Pedidos</a>
+  <a data-nav="perfil" href="perfil.html">Perfil</a>
+</nav>
+<script src="script.js"></script>
+</body>
+</html>
